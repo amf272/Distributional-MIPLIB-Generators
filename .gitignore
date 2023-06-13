@@ -1,3 +1,4 @@
 *.pyc
 gurobi.log
 *.mps
+*.DS_Store

@@ -1,0 +1,35 @@
+Corridor instance format:
+
+Lines starting with 'c' are comments
+Line starting with 'p' specifies two integers: the number of nodes in the graph and the number of terminals
+Lines starting with 'n' describe nodes in the graph (one for each node) in the following format:
+n i b u c e i1 i2 ... ie
+where:
+i is the id number of the node; i is an integer;
+b whether the node is a reserve; b is 0 or 1;
+u is the utility of the node; u is an integer;
+c is the cost of the node; c is an integer;
+e is the number of neighboring nodes; e is an integer;
+ij is the id of neighbor node j (j=1,2, ... ,e)
+
+
+Example:
+c
+c This is an example of a square grid graph of order 3 with 2 terminals
+c command line = ./corGenerator lattice 2f+random 2 uncorrelated 3 100 100 cor-lat-2f+r-u-3-100-100-2 1
+c
+c n = 9
+c r = 2
+c reserve 0
+c reserve 8
+c
+p 9 2
+n 0 1 48 0 2 1 3
+n 1 0 90 32 3 0 2 4
+n 2 0 88 78 2 1 5
+n 3 0 80 76 3 0 4 6
+n 4 0 90 26 4 1 3 5 7
+n 5 0 20 46 3 2 4 8
+n 6 0 30 38 2 3 7
+n 7 0 32 43 3 4 6 8
+n 8 1 27 0 2 5 7
