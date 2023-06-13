@@ -2,7 +2,6 @@ import numpy as np
 import networkx as nx
 import fire
 import pulp
-# import gurobipy as grb
 
 
 def partition_edges(edges, alpha, seed=1):
@@ -19,24 +18,6 @@ def partition_edges(edges, alpha, seed=1):
 
 def generate_MIP(nodes, E1, E2, node_weight, edge_cost):
 
-    # m = grb.Model()
-    # node_vars = {i: m.addVar(obj=-node_weight, vtype=grb.GRB.BINARY)
-    #              for i in nodes}
-
-    # edge_vars = {(i, j): m.addVar(obj=edge_cost, vtype=grb.GRB.BINARY)
-    #              for (i, j) in E2}
-
-    # m.setAttr("modelSense", grb.GRB.MINIMIZE)
-    # m.update()
-    # for (i, j) in E1:
-    #     m.addConstr(node_vars[i]+node_vars[j], grb.GRB.LESS_EQUAL, 1)
-    # for (i, j) in E2:
-    #     m.addConstr(node_vars[i]+node_vars[j] -
-    #                 edge_vars[(i, j)], grb.GRB.LESS_EQUAL, 1)
-
-    # m.update()
-
-    # perform the above by pulp
     prob = pulp.LpProblem("GISP", pulp.LpMinimize)
     node_vars = {i: pulp.LpVariable("node_{}".format(i), cat=pulp.LpBinary)
                     for i in nodes}
