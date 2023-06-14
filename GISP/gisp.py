@@ -5,6 +5,11 @@ import pulp
 
 
 def partition_edges(edges, alpha, seed=1):
+    """
+    Given a set of edges, partition them into two sets, E1 and E2, where E1 is
+    the set of edges that are not removable and E2 is the set of edges that are
+    removable.
+    """
     np.random.seed(seed)
     E1 = set()
     E2 = set()
@@ -17,6 +22,27 @@ def partition_edges(edges, alpha, seed=1):
 
 
 def generate_MIP(nodes, E1, E2, node_weight, edge_cost):
+    """
+    Given a GISP instance, generate a MIP formulation using pulp
+
+    Parameters
+    ----------
+    nodes : list
+        List of nodes in the graph.
+    E1 : set
+        Set of edges that are not removable.
+    E2 : set
+        Set of edges that are removable.
+    node_weight : float
+        Benefit of including a node in the indepent set.
+    edge_cost : float
+        Cost of ignoring an edge.
+    
+    Returns
+    -------
+    prob : pulp.LpProblem
+        The MIP formulation of the GISP instance.
+    """
 
     prob = pulp.LpProblem("GISP", pulp.LpMinimize)
     node_vars = {i: pulp.LpVariable("node_{}".format(i), cat=pulp.LpBinary)
@@ -71,6 +97,6 @@ def generate(filename, seed=1, nodes=75, edge_prob=0.5, edge_cost=1, node_weight
 
 if __name__ == "__main__":
     """
-    python gisp.py --filename=mip_instance.mps --nodes=75 --edge_prob=0.5 --edge_cost=1 --node_weight=100 --alpha=0.75
+    python gisp.py --filename=mip_instance.mps --nodes=75 --edge_prob=0.5 --edge_cost=1 --node_weight=100 --alpha=0.75 --seed=1
     """
     fire.Fire(generate)
