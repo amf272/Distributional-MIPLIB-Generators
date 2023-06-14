@@ -1,5 +1,7 @@
 mirror of: https://computational-sustainability.cis.cornell.edu/projects/index.php
 
+Citations 
+```
 @inproceedings{dilkina2010corlat,
   title={Solving connected subgraph problems in wildlife conservation},
   author={Dilkina, Bistra and Gomes, Carla P},
@@ -8,6 +10,39 @@ mirror of: https://computational-sustainability.cis.cornell.edu/projects/index.p
   year={2010},
   organization={Springer}
 }
+```
+```
+@article{conrad2012subgraph,
+  title={Wildlife corridors as a connected subgraph problem},
+  author={Conrad, Jon M and Gomes, Carla P and van Hoeve, Willem-Jan and Sabharwal, Ashish and Suter, Jordan F},
+  journal={Journal of Environmental Economics and Management},
+  volume={63},
+  number={1},
+  pages={1--18},
+  year={2012},
+  publisher={Elsevier}
+}
+```
+```
+@inproceedings{gomes2008networks,
+  title={Connections in networks: A hybrid approach},
+  author={Gomes, Carla P and Van Hoeve, Willem-Jan and Sabharwal, Ashish},
+  booktitle={Integration of AI and OR Techniques in Constraint Programming for Combinatorial Optimization Problems: 5th International Conference, CPAIOR 2008 Paris, France, May 20-23, 2008 Proceedings 5},
+  pages={303--307},
+  year={2008},
+  organization={Springer}
+}
+```
+```
+@inproceedings{conrad2007hardness,
+  title={Connections in networks: Hardness of feasibility versus optimality},
+  author={Conrad, Jon and Gomes, Carla P and Van Hoeve, Willem-Jan and Sabharwal, Ashish and Suter, Jordan},
+  booktitle={Integration of AI and OR Techniques in Constraint Programming for Combinatorial Optimization Problems: 4th International Conference, CPAIOR 2007, Brussels, Belgium, May 23-26, 2007. Proceedings 4},
+  pages={16--28},
+  year={2007},
+  organization={Springer}
+}
+```
 *****************************************************************************
 
 "corGenerator" is a generator of instances of the 
