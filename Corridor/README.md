@@ -1,4 +1,4 @@
-from: https://computational-sustainability.cis.cornell.edu/projects/index.php
+mirror of: https://computational-sustainability.cis.cornell.edu/projects/index.php
 
 @inproceedings{dilkina2010corlat,
   title={Solving connected subgraph problems in wildlife conservation},
@@ -27,7 +27,7 @@ CPAIOR-10: 7th International Conference on Integration of AI and OR Techniques i
 
 [2] Wildlife Corridors as a Connected Subgraph Problem 
 Jon Conrad, Carla P. Gomes, Willem-Jan van Hoeve, Ashish Sabharwal, Jordan F. Suter 
-JEEM: Journal of Environmental Economics and Management. Volume 63, Issue 1, pp 1–18, January 2012
+JEEM: Journal of Environmental Economics and Management. Volume 63, Issue 1, pp 1ï¿½18, January 2012
 
 [3] Connections in Networks: A Hybrid Approach 
 Carla P. Gomes, Willem-Jan van Hoeve, Ashish Sabharwal 
