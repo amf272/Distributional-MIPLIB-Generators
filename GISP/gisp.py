@@ -43,6 +43,18 @@ def generate(filename, seed=1, nodes=75, edge_prob=0.5, edge_cost=1, node_weight
     ----------
     filename : str
         Path to the file to save.
+    seed : int
+        Random seed for problem generation.
+    nodes : int
+        Number of nodes in the graph.
+    edge_prob : float
+        Probability of an edge existing between two nodes.
+    edge_cost : float
+        Cost of ignoring an edge.
+    node_weight : float
+        Benefit of including a node in the indepent set.
+    alpha : float
+        Probability of an edge being ``removable''.
     """
 
     rng = np.random.RandomState(seed)
@@ -59,6 +71,6 @@ def generate(filename, seed=1, nodes=75, edge_prob=0.5, edge_cost=1, node_weight
 
 if __name__ == "__main__":
     """
-    python -m gisp --filename=test.mps
+    python gisp.py --filename=mip_instance.mps --nodes=75 --edge_prob=0.5 --edge_cost=1 --node_weight=100 --alpha=0.75
     """
     fire.Fire(generate)
