@@ -1,1 +1,1 @@
-To generate an MVC instance, specify the parameters for the ```generateInstance()''' function, including the upper and lower bounds on the number of graph vertices, the average node degree and the random graph model.
+To generate an MVC instance, specify the parameters for the `generateInstance()` function, including the upper and lower bounds on the number of graph vertices, the average node degree and the random graph model.
